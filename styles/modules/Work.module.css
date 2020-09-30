@@ -1,0 +1,76 @@
+.rrpWork {
+  color: white;
+  position: relative;
+  background-color: black;
+}
+
+.rrpWork::before {
+  content: 'WORK';
+  font-family: var(--ffebold);
+  font-size: var(--fsbgh);
+  color: var(--colorgbh);
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+.whiteShader {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  background-image: linear-gradient(to bottom,rgb(0, 0, 0) 50%,
+  rgba(0, 0, 0, 0.932) 60%,
+  rgba(0, 0, 0, 0.856) 65%,
+  rgba(0, 0, 0, 0.726) 70%,                                               
+  rgba(0, 0, 0, 0));
+  z-index: 1;
+  width:50%;
+  height: 100px;
+}
+
+.rrpWorkProjectGrid {
+  
+}
+@media (min-width: 1200px) {
+  .rrpWorkHeaderGrid {
+    display: grid;
+    grid-template-columns: 50%;
+  }
+  .rrpWorkProjectGrid {
+    margin-top: 100px;
+  }
+}
+
+@media  screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .rrpWorkHeaderGrid {
+    display: grid;
+    grid-template-columns: 50%;
+  }
+  .whiteShader {
+    width:50%;
+   height: 80px;
+  }
+  .rrpWorkProjectGrid {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .rrpWorkHeaderGrid {
+    display: grid;
+    grid-template-columns: 55%;
+  }
+  .whiteShader {
+    height: 50px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .rrpWorkHeaderGrid {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .whiteShader {
+    width: 100%;
+    height: 30px;
+  }
+}

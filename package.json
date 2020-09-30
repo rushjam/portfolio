@@ -8,6 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "animejs": "^3.2.0",
+    "aos": "^3.0.0-beta.6",
+    "locomotive-scroll": "^3.6.1",
     "next": "9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1"

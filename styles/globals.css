@@ -1,16 +1,323 @@
+:root {
+  --colorblack: #000000;
+  --colorwhite: #ffffff;
+  --bgcnblack: rgba(29,29,31,0.72);
+  --bgcnwhite: rgba(255,255,255,0.72);
+  --colorgbh: #101010;
+  --ffelight: 'Manrope-ExtraLight';
+  --fflight: 'Manrope-Light';
+  --ffregular: 'Manrope-Regular';
+  --ffbold: 'Manrope-Bold';
+  --ffebold: 'Manrope-ExtraBold';
+  --fsbgh: clamp(80px, 14vw + 1rem, 270px);
+  --fsh1: 72px;
+  --fsp: 24px;
+  --fsa: 20px;
+}
+
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+body {
+  background-color: #ffffff;
+  font-family: var(--ffregular);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--ffbold);
 }
 
 a {
+  font-family: var(--ffbold);
   color: inherit;
+  font-size: var(--fsa);
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+
+/* navbar sticky */
+.rrpNavbarSticky {
+  background-color: var(--bgcnwhite);
+  transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+/* mobile navigation */
+.toggle-btn {
+  display: block;
+  z-index: 100;
+  position: fixed;
+  right: 25px;
+  top: 20px;
+  cursor: pointer;
+}
+.toggle-btn .bar {
+  width: 30px;
+  height: 3px;
+  margin: 7px auto;
+  background-color: #000000;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.toggle-btn .bar:nth-child(2) {
+  width: 20px;
+}
+
+#toggle:checked ~ nav {
+  opacity: 1;
+  visibility: visible;
+}
+#toggle:checked ~ nav ul {
+  top: 70px;
+}
+#toggle:checked ~ nav ul li {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+}
+ #toggle:checked ~ nav ul li:nth-child(1) {
+  -webkit-transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.1s;
+  transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.1s;
+}
+ #toggle:checked ~ nav ul li:nth-child(2) {
+  -webkit-transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.2s;
+  transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.2s;
+}
+ #toggle:checked ~ nav ul li:nth-child(3) {
+  -webkit-transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.3s;
+  transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.3s;
+}
+ #toggle:checked ~ nav ul li:nth-child(4) {
+  -webkit-transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.4s;
+  transition: all 0.3s cubic-bezier(0.6, 0, 0.8, 1.5) 0.4s;
+}
+ #toggle:checked + label.toggle-btn .bar {
+  background-color: red;
+}
+ #toggle:checked + label.toggle-btn .bar:nth-child(2) {
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  opacity: 0;
+}
+ #toggle:checked + label.toggle-btn .bar:nth-child(1) {
+  -webkit-transform: translateY(12px) rotate(50deg);
+          transform: translateY(12px) rotate(50deg);
+}
+ #toggle:checked + label.toggle-btn .bar:nth-child(3) {
+  -webkit-transform: translateY(-8px) rotate(-48deg);
+          transform: translateY(-8px) rotate(-48deg);
+}
+
+/* locomotive scroll */
+/*! locomotive-scroll v3.6.1 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+  overflow: hidden; }
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.has-scroll-smooth body {
+  overflow: hidden; }
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh; }
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0; }
+  .c-scrollbar:hover {
+    transform: scaleX(1.45); }
+  .c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
+    opacity: 1; }
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab; }
+  .has-scroll-dragging .c-scrollbar_thumb {
+    cursor: -webkit-grabbing;
+    cursor: grabbing; }
+
+/* Grain effect */
+.fix {
+  position: fixed;
+}
+
+.pen {
+  pointer-events: none;
+}
+
+.grain {
+  transform: translateZ(0);
+  z-index: 99;
+}
+
+.top {
+  top: 0;
+}
+
+.left {
+  left: 0;
+}
+
+.y {
+  height: 100%;
+}
+
+.x {
+  width: 100%;
+}
+.grain:before {
+  content: "";
+  top: -10rem;
+  left: -10rem;
+  width: calc(100% + 20rem);
+  height: calc(100% + 20rem);
+  z-index: 99;
+  position: fixed;
+  background-image: url(../public/noise.png);
+  opacity: 1;
+  pointer-events: none;
+  -webkit-animation: noise 1s steps(2) infinite;
+  animation: noise 1s steps(50) infinite;
+}
+
+@-webkit-keyframes noise {
+  to {
+      transform: translate3d(-7rem, 0, 0)
+  }
+}
+
+@keyframes noise {
+  0% {
+      transform: translate3d(0, 9rem, 0)
+  }
+
+  10% {
+      transform: translate3d(-1rem, -4rem, 0)
+  }
+
+  20% {
+      transform: translate3d(-8rem, 2rem, 0)
+  }
+
+  30% {
+      transform: translate3d(9rem, -9rem, 0)
+  }
+
+  40% {
+      transform: translate3d(-2rem, 7rem, 0)
+  }
+
+  50% {
+      transform: translate3d(-9rem, -4rem, 0)
+  }
+
+  60% {
+      transform: translate3d(2rem, 6rem, 0)
+  }
+
+  70% {
+      transform: translate3d(7rem, -8rem, 0)
+  }
+
+  80% {
+      transform: translate3d(-9rem, 1rem, 0)
+  }
+
+  90% {
+      transform: translate3d(6rem, -5rem, 0)
+  }
+
+  to {
+      transform: translate3d(-7rem, 0, 0)
+  }
+}
+
+/* line */
+.rrpline {
+  z-index: -1;
+}
+.rrpline:after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 40px;
+  width: 100%;
+  background: linear-gradient(60deg, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f, #abf25f, #5ff281, #5ff2f0);
+  animation: moveGradient 10s alternate infinite;
+  background-position: 0 50%;
+  background-size: 500% 500%;
+  z-index: 0;
+}
+.rrplineHero::after {
+  transform: rotate(90deg);
+  top: 50%;
+  right: 50%;
+  
+}
+.rrplineWork {
+  height: 20px;
+  width: 100%;
+  z-index: 0;
+}
+.rrplineWork::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    background: linear-gradient(60deg, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f, #abf25f, #5ff281, #5ff2f0);
+    animation: moveGradient 10s alternate infinite;
+    background-position: 0 50%;
+    background-size: 500% 500%;
+    z-index: 0;
+} 
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .rrpline {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .rrpline {
+    display: none;
+  }
 }

@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Manrope-SemiBold';
+    src: url('./manrope/Manrope-SemiBold.woff2') format('woff2'),
+    url('./manrope/Manrope-SemiBold.woff') format('woff');
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Manrope-Regular';
+    src:
+    url('./manrope/Manrope-Regular.woff2') format('woff2'),
+    url('./manrope/Manrope-Regular.woff') format('woff'); 
+    font-style: normal;
+  }@font-face {
+    font-family: 'Manrope-Medium';
+    src: 
+    url('./manrope/Manrope-Medium.woff2') format('woff2'),
+    url('./manrope/Manrope-Medium.woff') format('woff');
+    font-style: normal;
+  }@font-face {
+    font-family: 'Manrope-Light';
+    src: 
+    url('./manrope/Manrope-Light.woff2') format('woff2'),
+    url('./manrope/Manrope-Light.woff') format('woff');
+    font-style: normal;
+  }@font-face {
+    font-family: 'Manrope-ExtraLight';
+    src: 
+    url('./manrope/Manrope-ExtraLight.woff2') format('woff2'),
+    url('./manrope/Manrope-ExtraLight.woff') format('woff');
+    font-style: normal;
+  }@font-face {
+    font-family: 'Manrope-ExtraBold';
+    src: 
+    url('./manrope/Manrope-ExtraBold.woff2') format('woff2'),
+    url('./manrope/Manrope-ExtraBold.woff') format('woff');
+    font-style: normal;
+  }@font-face {
+    font-family: 'Manrope-Bold';
+    src: 
+    url('./manrope/Manrope-Bold.woff2') format('woff2'),
+    url('./manrope/Manrope-Bold.woff') format('woff');
+    font-style: normal;
+  }

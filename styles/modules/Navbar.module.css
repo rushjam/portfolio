@@ -1,0 +1,116 @@
+.rrpHeaderWrapper {
+    width: 100%;
+    z-index: 999;
+}
+
+.rrpHeader {
+    height: 80px;
+    width: 100%;
+    -webkit-backdrop-filter: saturate(180%);
+    backdrop-filter: blur(15px);
+    z-index: 100;
+    transition: 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+    transition-property: backdrop-filter, -webkit-backdrop-filter;
+}
+.rrphB {
+    background-color: var(--bgcnBlack);
+    border-bottom: rgba(255,255,255,0.24);
+}
+.rrpHeaderInnerWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    color: #000;
+}
+
+.rrpLogoContainer {
+    height: 80px;
+}
+.rrpLogoImage {
+    height: 100%;
+}
+.rrpLogoImage path {
+    stroke: #000;
+    fill: #000;
+}
+
+.rrpNavItemWrapper {
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+}
+.rrpNavItem {
+    padding: 10px;
+    display: inline-block;
+}
+
+/* mobile .navvigation */
+.rrpMNavDiv nav {
+    -webkit-backdrop-filter: saturate(180%);
+    backdrop-filter: blur(35px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.rrpMNavDiv nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 170px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.rrpMNavDiv nav ul li {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+}
+.rrpMNavDiv nav ul li a {
+    display: block;
+    font-size: 2em;
+    text-decoration: none;
+    padding: 10px 0;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.rrpMNavDiv nav ul li a:hover {
+    color: #E84A5F;
+}
+
+
+@media (max-width: 767.98px) {
+    .rrpMNavDiv {
+        display: visible;
+    }
+    .rrpNavDiv {
+        display: none;
+    }
+    .rrpMNavDiv nav {
+        z-index: 99;
+    }
+}
+
+@media (min-width: 768px) {
+    .rrpMNavDiv {
+        display: none;
+    }
+        .rrpNavDiv {
+        display: visible;
+    }
+}

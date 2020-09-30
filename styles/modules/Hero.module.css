@@ -1,0 +1,75 @@
+
+.rrpHeroGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.rrpHeroInfoWrapper {
+    z-index: 0;
+}
+.rrpHeroInfoInnerWrapper h1 {
+    font-size: clamp(2rem, 3.0vw, 4.0rem); 
+}
+.rrpHeroInfoInnerWrapper p {
+    font-size: clamp(1rem, 2vw, 2.75rem);
+}
+.amature {
+    display: inline-block;
+    position: relative;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: rgb(158 158 158);
+}
+.cross {
+    position: absolute;
+    border-top: 3px solid rgb(158 158 158);
+    width: 100%;
+    display: block;
+    top: 50%;
+}
+.rrpHeroAnimatedText svg path {
+    transition: fill .5s ease-in-out;
+    fill: transparent;
+}
+.rrpHeroAnimatedText {
+    z-index: 0;
+}
+@media (min-width: 1200px) {
+    .rrpHeroContainer {
+        max-width: 1140px;
+        margin: 0 auto;
+        height: auto;
+    }
+    .rrpHeroAnimatedText svg path:hover {
+        fill: #000;
+    }
+}
+
+@media  screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .rrpHeroContainer {
+        max-width: 932px;
+        margin: 0 auto;
+        height: auto;
+    }
+    .rrpHeroAnimatedText svg path:hover {
+        fill: #000;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .rrpHeroContainer {
+        max-width: 708px;
+        margin: 0 auto;
+        height: auto;
+    }
+}
+
+@media (max-width: 787.98px) {
+    .rrpHeroContainer {
+        max-width: 717px;
+        margin: 0 auto;
+        padding: 30px;
+        height: auto;
+    }
+}
