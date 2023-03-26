@@ -13,7 +13,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
+      if (scrollTop > 0) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -68,7 +68,9 @@ const Navbar = () => {
                   </a>
                 </button>
               ) : (
-                <a href={`#${nav.id}`}>{nav.title}</a>
+                <a href={nav.id === "projects" ? `/${nav.id}` : `/#${nav.id}`}>
+                  {nav.title}
+                </a>
               )}
             </li>
           ))}
