@@ -3,6 +3,7 @@ import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
+import external_project from "./external-link.png";
 import github from "./github.png";
 import link from "./link.png";
 import menu from "./menu.svg";
@@ -25,7 +26,7 @@ import java from "./tech/java.png";
 import python from "./tech/python.png";
 import graphql from "./tech/graphql.png";
 import aws from "./tech/aws.png";
-import mysql from "./tech/mysql.png"
+import mysql from "./tech/mysql.png";
 
 import acm from "./company/acm.jpg";
 import atliq from "./company/atliq.jpg";
@@ -49,6 +50,7 @@ export {
   creator,
   mobile,
   web,
+  external_project,
   github,
   menu,
   close,
@@ -83,5 +85,5 @@ export {
   python,
   graphql,
   aws,
-  mysql
+  mysql,
 };

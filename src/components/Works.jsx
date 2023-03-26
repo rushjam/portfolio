@@ -3,11 +3,13 @@ import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
+import { external_project } from "../assets";
 import { github } from "../assets";
 import { link } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import { Link } from "react-router-dom";
 
 const ProjectCard = ({
   index,
@@ -86,7 +88,20 @@ const Works = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <Link to={"/projects"}>
+          <div className="flex justify-between">
+            <div>
+              <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+            </div>
+            <div className="flex justify-between">
+              <img
+                src={external_project}
+                alt="external-projects"
+                className={`${styles.sectionSectionHeadLink} object-contain w-14`}
+              />
+            </div>
+          </div>
+        </Link>
       </motion.div>
 
       <div className="w-full flex">
