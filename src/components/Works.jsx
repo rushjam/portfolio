@@ -3,6 +3,7 @@ import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
+import { external_project } from "../assets";
 import { github } from "../assets";
 import { link } from "../assets";
 import { SectionWrapper } from "../hoc";
@@ -86,7 +87,16 @@ const Works = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <div className="flex justify-between">
+          <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+          <a href="">
+            <img
+              src={external_project}
+              alt="external-projects"
+              className="object-contain w-14"
+            />
+          </a>
+        </div>
       </motion.div>
 
       <div className="w-full flex">
