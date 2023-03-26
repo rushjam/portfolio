@@ -277,6 +277,29 @@ const projects = [
     source_code_link: "https://github.com/rushjam/Project-Management-App.git",
     external_link: "https://project-management-app-client-4fbs.onrender.com"
   },
+  {
+    name: "Project Management App",
+    description:
+      "A comprehensive project management platform that allow managers to plan, organize, and manage resource tools and develop resource estimates for client project's data.",
+    tags: [
+      {
+        name: "node.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "React",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: projectManDash,
+    source_code_link: "https://github.com/rushjam/Project-Management-App.git",
+    external_link: "https://project-management-app-client-4fbs.onrender.com"
+  },
+  
 ];
 
 export { services, technologies, experiences, testimonials, projects };
