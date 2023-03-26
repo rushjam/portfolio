@@ -9,6 +9,7 @@ import { link } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import { Link } from "react-router-dom";
 
 const ProjectCard = ({
   index,
@@ -87,16 +88,20 @@ const Works = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>My work</p>
-        <div className="flex justify-between">
-          <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
-          <a href="">
-            <img
-              src={external_project}
-              alt="external-projects"
-              className="object-contain w-14"
-            />
-          </a>
-        </div>
+        <Link to={"/projects"}>
+          <div className="flex justify-between">
+            <div>
+              <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+            </div>
+            <div className="flex justify-between">
+              <img
+                src={external_project}
+                alt="external-projects"
+                className={`${styles.sectionSectionHeadLink} object-contain w-14`}
+              />
+            </div>
+          </div>
+        </Link>
       </motion.div>
 
       <div className="w-full flex">
