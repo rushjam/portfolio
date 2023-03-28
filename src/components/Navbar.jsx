@@ -62,7 +62,7 @@ const Navbar = () => {
                 <button className="rounded-md text-[#1d1836] hover:text-black px-2 px-0.5 green-pink-gradient">
                   <a
                     target="_black"
-                    href={`https://drive.google.com/file/d/1ViDEYEWKDB3weLoqBYF9K6AL6Gie7zm3/view?usp=sharing`}
+                    href={`https://drive.google.com/file/d/1pUmXreb4WdcU-qEy4Oo37aDJ7FYcHMzB/view?usp=share_link`}
                   >
                     {nav.title}
                   </a>
@@ -105,13 +105,17 @@ const Navbar = () => {
                     <button className="rounded-md text-[#1d1836] hover:text-black px-2 px-0.5 green-pink-gradient">
                       <a
                         target="_black"
-                        href={`https://drive.google.com/file/d/1ViDEYEWKDB3weLoqBYF9K6AL6Gie7zm3/view?usp=sharing`}
+                        href={`https://drive.google.com/file/d/1pUmXreb4WdcU-qEy4Oo37aDJ7FYcHMzB/view?usp=share_link`}
                       >
                         {nav.title}
                       </a>
                     </button>
                   ) : (
-                    <a href={`#${nav.id}`}>{nav.title}</a>
+                    <a
+                      href={nav.id === "projects" ? `/${nav.id}` : `/#${nav.id}`}
+                    >
+                      {nav.title}
+                    </a>
                   )}
                 </li>
               ))}
